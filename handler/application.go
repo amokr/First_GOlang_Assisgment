@@ -69,9 +69,11 @@ func deleteByName(c *gin.Context) {
 
 func rootPage(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
-		"message":   "Stock service started",
-		"getStock":  "/stock",
-		"postStock": "/stock",
+		"message":      "Stock service started",
+		"getStock":     "/stock",
+		"postStock":    "/stock",
+		"getByName":    "/stock/{{name}}",
+		"deleteByName": "/stock/{{name}}",
 	})
 }
 
